@@ -1,0 +1,23 @@
+*{
+    background-color:rgb(252, 193, 201);
+    box-sizing: border-box;
+    font-style: oblique;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.titulo{
+    text-align: center;
+    font-size: xx-large;
+}
+.botones{
+    width: 100px;
+    height: 50px;
+    margin-left: 50%;
+    font-size: medium;
+    text-align: center;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+}
+
+
