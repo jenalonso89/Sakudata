@@ -9,7 +9,7 @@ class ClanController extends Controller
 {
     //
     function index(){
-        $clanes = Clan::all();
+        $clanes = Clan::withCount('personajes')->get();
         return view('clanes', compact('clanes'));
     }
     function create(){
@@ -20,9 +20,27 @@ class ClanController extends Controller
         $clan->nombre = $request->nombre;
         $clan->imagen = $request->imagen;
         $clan->residencia = $request->residencia;
-        $clan->miembros = $request->miembros;
         $clan->descripcion = $request->descripcion;
         $clan->save();
         return redirect('/clanes');
     }
+    function edit($id){
+        $clan = Clan::findOrFail($id);
+        return view('editClanes', compact('clan'));
+    }
+    function upload(Request $request, $id){
+       $clan = Clan::findOrFail($id);
+       $clan->nombre = $request->nombre;
+       $clan->imagen = $request->imagen;
+       $clan->residencia = $request->residencia;
+       $clan->descripcion = $request->descripcion;
+       $clan->save();
+       return redirect('/clanes');
+    }
+    function destroy($id){
+         $clan = Clan::findOrFail($id);
+         $clan->delete();
+         return redirect("/clanes");
+    }
+    
 }

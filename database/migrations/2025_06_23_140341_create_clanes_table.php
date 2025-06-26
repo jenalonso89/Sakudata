@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('nombre')->unique();
             $table->string('imagen')->nullable();
             $table->string('residencia');
-            $table->integer('miembros');
             $table->text('descripcion');
         });
     }

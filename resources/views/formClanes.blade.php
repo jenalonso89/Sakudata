@@ -11,7 +11,7 @@
         <form method="POST" action="/clanes/crear">
             @csrf
             <label>
-                Nombre:
+            Nombre:
             </label>
             <input type="text" name="nombre">
             <label>
@@ -23,10 +23,6 @@
                 Residencia:
             </label>
              <input type="text" name="residencia">
-            <label>
-                Miembros:
-            </label>
-             <input type="number" name="miembros">
             <label>
                 Descripcion:
             </label>

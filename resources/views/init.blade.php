@@ -7,9 +7,26 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body>
-        <h1 class="titulo">Pagina Principal</h1>
-        <p>Esta página esta dedicada a la recolección de datos del libro "La sangre de los cerezos" escrito por Daniel Astorga y Jenifer Alonso</p>
-        <a href="/clanes">
-        <button class="botones">Ver clanes</button>
-        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/jenifer-a-2968a3144/"> <img src="/images/instagram.png"></a>
+            <a href="https://www.linkedin.com/in/jenifer-a-2968a3144/"> <img src="/images/linkedin.png"></a>
+        </div>
+        <div class="cajon">
+            <h1 class="titulo">Sakudata</h1>
+            <p class="subtitulo">Un libro de Daniel Astorga</p>
+            <p class="subtitulo">Y Jenifer Alonso</p>
+            <h2 class="libro">"La Sangre de los Cerezos"</h2>
+            <div class="cajon-2">
+            <p>Aplicación que guarda los datos de los personajes del libro</p>
+            </div>
+            <a href="/clanes">
+            <button class="boton-clan">Ver clanes</button>
+            </a>
+        </div>
+        <footer>
+            <p>
+                © 2025 Jenifer A.B. Todos los derechos reservados.Este contenido no puede ser reproducido, distribuido ni utilizado de ninguna forma sin el permiso expreso por escrito de la autora.
+            </p>
+        </footer>
+        
     </body>

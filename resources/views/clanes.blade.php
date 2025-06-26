@@ -7,18 +7,26 @@
         <title>Clanes</title>
     </head>
     <body>
-        <h1 class="titulo">Listado de Clanes</h1>
-        <div>
+        <div class="desplazamiento">
+             <a href="/clanes/crear"><button class="botones">Añadir clan</button></a>
+             <a href="/"><button class="botones">Volver</button></a>
+        </div>
+        <header class="listado-clanes">
+            <h1>Listado de Clanes</h1>
+        </header>
+        <div class="folio">
             @foreach ($clanes as $clan)
-                <figure>
+                <figure class="tarjeta">
                     <h3>{{$clan->nombre}}</h3>
-                    <img class="avatar"src={{$clan->imagen}} alt={{$clan->nombre}}>
+                    <a href="/clanes/{{ $clan->id }}/personajes">
+                    <img class="avatar" src="{{ $clan->imagen }}" alt="{{ $clan->nombre }}">
+                    </a>
                     <figcaption>{{$clan->descripcion}}</figcaption>
                     <figcaption>Residencia:{{$clan->residencia}}</figcaption>
-                    <figcaption>Miembros:{{$clan->miembros}}</figcaption>
-                </figure>
+                    <figcaption><Miembros:>{{$clan->personajes_count}}</Miembros:></figcaption>
+                    <a href="/clanes/editar/{{ $clan->id }}"><button class="boton-tarjeta">Editar</button></a>
+                </figure>   
             @endforeach
         </div>
-        <a href="/clanes/crear"><button class="botones">Añadir clan</button></a>
-        <a href="/"><button class="botones">Volver</button></a>
+       
     </body>
